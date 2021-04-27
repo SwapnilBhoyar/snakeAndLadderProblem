@@ -10,19 +10,19 @@ public class snakeAndLadder {
 
 		switch(choice){
 		case ladder:
-			System.out.println("Current position is:"+position);
-			position+=die;
-			System.out.println("Player got ladder, New position is:"+position);
+			System.out.println("Current position is:" + position);
+			position += die;
+			System.out.println("Player got ladder, New position is:" + position);
 			break;
 			
 		case snake:
-			System.out.println("Current position is:"+position);
-			position-=die;
-			System.out.println("Player got the snake, New position is:"+position);
+			System.out.println("Current position is:" + position);
+			position -= die;
+			System.out.println("Player got the snake, New position is:" + position);
 			break;
 			
 		default:
-			System.out.println("No Play, Stay at the same position:"+position);
+			System.out.println("No Play, Stay at the same position:" + position);
 			
 		}
 	}
