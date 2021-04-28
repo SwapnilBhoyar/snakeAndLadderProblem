@@ -7,13 +7,18 @@ public class snakeAndLadder {
 
 		while(position < 100){
 			int die = (int)Math.floor( ( ( Math.random() * 10 ) % 6) + 1);
-			int choice=(int)Math.floor((Math.random()*10)%3);
+			int choice=(int)Math.floor(( Math.random() * 10) % 3);
 
 			switch(choice){
 			case ladder:
 				System.out.println("Number on die is:" + die);
 				position += die;
-				if(position >= 100){
+				if(position > 100){
+					position -= die;
+					int remaining = 100 - position;
+					System.out.println("Player needs exact " + remaining + " on die to win!");
+				}
+				else if(position == 100){
 					System.out.println("Player win the game!");
 				}
 				else{
