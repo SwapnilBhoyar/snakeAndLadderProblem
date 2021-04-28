@@ -2,11 +2,12 @@ public class snakeAndLadder {
 	public static final int ladder = 1;
 	public static final int snake = 2;
 	public static void main(String args[]) {
-		int position = 0;
+		int position = 0 , dieCount = 0;
 		System.out.println("Current Position is:" + position);
 
 		while(position < 100){
 			int die = (int)Math.floor( ( ( Math.random() * 10 ) % 6) + 1);
+			dieCount++;
 			int choice=(int)Math.floor(( Math.random() * 10) % 3);
 
 			switch(choice){
@@ -40,6 +41,7 @@ public class snakeAndLadder {
 				
 			}
 		}
+		System.out.println("Total number of times Die played is:" + dieCount);
 	}
 
 }
